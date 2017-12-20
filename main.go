@@ -90,7 +90,7 @@ func main() {
 	miner.Mine()
 
 	//Start printing out the hashrates of the different gpu's
-	hashRateReports := make([]float64, nrOfMiningDevices)
+	hashRateReports := make(map[int]float64)
 	for {
 		//No need to print at every hashreport, we have time
 		for i := 0; i < nrOfMiningDevices; i++ {
